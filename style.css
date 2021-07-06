@@ -1,9 +1,11 @@
 .card{
     margin: 2rem;
-
+    box-shadow: 10px 10px 5px grey;
 }
 
 .card-header{
-    width: 13rem;
+    font-size: 25px;
+    font-weight: bold;
     text-align: center;
 }
+
