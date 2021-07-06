@@ -8,16 +8,16 @@ const managers = [];
 const engineers = [];
 const interns = [];
 
-const generateManagerCard = (managers) => {
+const generateManagerCard = (manager) => {
   `
     <div class="card bg-light mb-4" style="max-width: 18rem;">
-        <div class="card-header bg-danger">${managers.name}</div>
-        <div class="card-header bg-danger">${managers.role}</div>
+        <div class="card-header bg-danger">${manager.name}</div>
+        <div class="card-header bg-danger">${manager.role}</div>
         <div class="card-body">
         <div class="list-group">
-            <li class="list-group-item">${managers.id}</li>
-            <li class="list-group-item">${managers.email}</li>
-            <li class="list-group-item">${managers.office}</li>
+            <li class="list-group-item">${manager.id}</li>
+            <li class="list-group-item">${manager.email}</li>
+            <li class="list-group-item">${manager.office}</li>
         </div>
         </div>
     </div>
@@ -180,11 +180,5 @@ firstQuestion();
 
 const secondQuestion = () => {
 managers.forEach((manager => {
-    fs.appendFileSync("index.js", generateManagerCard(manager), err => {
-        if (err) {console.log(err);
-        }else{
-            console.log("you did it");
-            fs.readFileSync("index.js", "utf8")
-        }
-    })
+    fs.writeFileSync("index.html", generateManagerCard(manager))
 }))}
