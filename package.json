@@ -1,0 +1,29 @@
+{
+  "name": "Team-Profile-Gen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "email-validator": "^2.0.4",
+    "inquirer": "^8.1.1",
+    "jest": "^27.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zi-on/Team-Profile-Gen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zi-on/Team-Profile-Gen/issues"
+  },
+  "homepage": "https://github.com/Zi-on/Team-Profile-Gen#readme"
+}
