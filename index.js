@@ -45,7 +45,7 @@ const generateManagerCard = (manager) => {
         <div class="card-body">
         <div class="list-group">
             <li class="list-group-item">ID: ${manager.id}</li>
-            <li class="list-group-item">Email: ${manager.email}</li>
+            <li class="list-group-item">Email: <a href="mailto:${manager.email}">${manager.email}</li>
             <li class="list-group-item">Office: ${manager.office}</li>
         </div>
         </div>
@@ -68,8 +68,8 @@ const generateEngineerCard = (engineer) => {
     <div class="card-body">
     <div class="list-group">
         <li class="list-group-item">ID: ${engineer.id}</li>
-        <li class="list-group-item">Email: ${engineer.email}</li>
-        <li class="list-group-item">GitHub: ${engineer.github}</li>
+        <li class="list-group-item">Email: <a href="mailto:${engineer.email}">${engineer.email}</a> </li>
+        <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.github}">${engineer.github}</a></li>
     </div>
     </div>
 </div>
@@ -88,7 +88,7 @@ const generateInternCard = (intern) => {
     <div class="card-body">
     <div class="list-group">
         <li class="list-group-item">ID: ${intern.id}</li>
-        <li class="list-group-item">Email: ${intern.email}</li>
+        <li class="list-group-item">Email: <a href="mailto:${intern.email}">${intern.email}</li>
         <li class="list-group-item">School: ${intern.school}</li>
     </div>
     </div>
@@ -125,6 +125,7 @@ const addTeamMember = () => {
           module.exports = managers;
           module.exports = engineers;
           module.exports = interns;
+          deleteHtml();
           topHtmlFile();
           managerGenerator();
           engineerGenerator();
@@ -266,6 +267,9 @@ const firstQuestion = () => {
 
 firstQuestion();
 
+const deleteHtml = () => {
+  fs.unlinkSync("./index.html");
+}
 const topHtmlFile = () => {
     fs.appendFileSync("index.html", generateTopHtml());
 };

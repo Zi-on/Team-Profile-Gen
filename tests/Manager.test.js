@@ -1,0 +1,1 @@
+const Manager = require("./team-members/Manager");

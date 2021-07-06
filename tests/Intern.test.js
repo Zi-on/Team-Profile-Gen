@@ -1,0 +1,1 @@
+const Intern = require("./team-members/Intern");
