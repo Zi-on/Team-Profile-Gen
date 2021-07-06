@@ -4,6 +4,7 @@ const Intern = require("./team-members/Intern");
 
 const inquirer = require("inquirer");
 const fs = require("fs");
+
 const managers = [];
 const engineers = [];
 const interns = [];
@@ -45,7 +46,7 @@ const generateManagerCard = (manager) => {
         <div class="card-body">
         <div class="list-group">
             <li class="list-group-item">ID: ${manager.id}</li>
-            <li class="list-group-item">Email: <a href="mailto:${manager.email}">${manager.email}</li>
+            <li class="list-group-item">Email: <a href="mailto:${manager.email}">${manager.email}</a></li>
             <li class="list-group-item">Office: ${manager.office}</li>
         </div>
         </div>
@@ -88,7 +89,7 @@ const generateInternCard = (intern) => {
     <div class="card-body">
     <div class="list-group">
         <li class="list-group-item">ID: ${intern.id}</li>
-        <li class="list-group-item">Email: <a href="mailto:${intern.email}">${intern.email}</li>
+        <li class="list-group-item">Email: <a href="mailto:${intern.email}">${intern.email}</a></li>
         <li class="list-group-item">School: ${intern.school}</li>
     </div>
     </div>
@@ -269,7 +270,7 @@ firstQuestion();
 
 const deleteHtml = () => {
   fs.unlinkSync("./index.html");
-}
+};
 const topHtmlFile = () => {
     fs.appendFileSync("index.html", generateTopHtml());
 };
