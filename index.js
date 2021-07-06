@@ -125,7 +125,7 @@ const addTeamMember = () => {
           module.exports = managers;
           module.exports = engineers;
           module.exports = interns;
-          deleteHtml();
+          // deleteHtml();
           topHtmlFile();
           managerGenerator();
           engineerGenerator();
