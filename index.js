@@ -1,6 +1,6 @@
-const Engineer = require("../team-members/Engineer");
-const Manager = require("../team-members/Manager");
-const Intern = require("../team-members/Intern");
+const Engineer = require("./team-members/Engineer");
+const Manager = require("./team-members/Manager");
+const Intern = require("./team-members/Intern");
 
 const inquirer = require("inquirer");
 const fs = require("fs");
@@ -126,6 +126,7 @@ const addTeamMember = () => {
           module.exports = managers;
           module.exports = engineers;
           module.exports = interns;
+          console.log("You successfully updated index.html");
           deleteHtml();
           topHtmlFile();
           managerGenerator();
