@@ -11,6 +11,7 @@ You are able to create team profiles that can be viewed as a website.
 - [Tests](#tests)
 - [License](#license)
 - [Contact Me](#contact-me)
+- [Video](#video)
 
 ## Installation
 1. have node.js installed
@@ -31,6 +32,9 @@ tests were ran using jest
 MIT
 
 <img src="./pictures/team-pro-gen.png"></img>
+
+## Video
+https://www.youtube.com/watch?v=7iYPG6r36fM
 
 ## Contact Me
 GitHub: https://github.com/Zi-on
