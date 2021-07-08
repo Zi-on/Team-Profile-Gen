@@ -28,7 +28,7 @@ const generateTopHtml = () => {
           <h1 class="display-4 text-center">My Team</h1>
         </div>
     </div>
-    <div class="row">`
+    <div class="row justify-content-center">`
 }
 
 const generateManagerCard = (manager) => {
